@@ -1,0 +1,103 @@
+body{
+	background-image: url('../images/1-imgbg.png');
+	background-repeat: repeat;
+	background-position: center;
+	max-width: 100%;
+	max-height: 100%;
+	height: 633px;
+	/*background-color: #000;*/
+	padding-top: 70px;
+}
+.navbar{
+	opacity: 0.9;
+	border-bottom-color: #CC3300;
+/*	border-bottom-width: medium;*/
+}
+#home-container{
+	padding-top: 50px;
+}
+#home-container h2{
+	color: #CC3300;
+	font-size: 60px;
+	font-family: Tahoma;
+	font-weight: bold;
+}
+#home-container p{
+	color: #fff;
+	font-size: 20px;
+}
+#btn-admin-login{
+	font-size: 30px;
+	font-family: Tahoma;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+
+/*manuall added*/
+/*modal*/
+.container, .modal, .modal-dialog{
+	opacity: 1;
+}
+
+
+
+
+#scheduling-container{
+	padding-top: 20px;
+}
+
+
+#panelviewtask{
+	/*padding-top: 10px;*/
+}
+
+
+/*order table*/
+#orderstable{
+	padding-top: 10px;
+}
+
+#btnsched{
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+#btnmanageorder{
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+#btnverifyorder{
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+#btnprocesspayment{
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+#btnmanageinventory{
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+#btnreports{
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+#btnaccnting{
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+#btnprofile{
+	padding:50px 30px;
+}
+
+
+
+#row1{
+	margin-top:150px;
+}
+#row2{
+	padding-top: 30px;
+}
+#row3{
+	padding-top: 30px;
+}

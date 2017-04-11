@@ -1,0 +1,929 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7E7AAC49-D235-4532-BABA-3C89C89902D4}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KatMaLea</RootNamespace>
+    <AssemblyName>KatMaLea</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\packages\AjaxControlToolkit.15.1.3.0\lib\net40\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Components\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Components\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Recaptcha, Version=1.0.5.0, Culture=neutral, PublicKeyToken=9afc4d65b28c38c2, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Recaptcha.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DataVisualization" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WebGrease">
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Audittrail.aspx" />
+    <Content Include="billout.aspx" />
+    <Content Include="categories.aspx" />
+    <Content Include="categoryMenu.aspx" />
+    <Content Include="ChartFoodOrder.aspx" />
+    <Content Include="content\toastr.css" />
+    <Content Include="content\toastr.min.css" />
+    <Content Include="controls\EquipmentNavigation.ascx" />
+    <Content Include="controls\Navigation.ascx" />
+    <Content Include="controls\ordernav.ascx" />
+    <Content Include="controls\referenceNav.ascx" />
+    <Content Include="controls\referenceNavigation.ascx" />
+    <Content Include="css\toastr.min.css" />
+    <Content Include="editInventory.aspx" />
+    <Content Include="crewlist.aspx" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\custom.css" />
+    <Content Include="css\ordercss.css" />
+    <Content Include="deleteCategory.aspx" />
+    <Content Include="deletecrew.aspx" />
+    <Content Include="deleteEquipment.aspx" />
+    <Content Include="deleteExpense.aspx" />
+    <Content Include="deleteExpenseDetails.aspx" />
+    <Content Include="deleteIngredient.aspx" />
+    <Content Include="deleteMaintenance.aspx" />
+    <Content Include="deleteMeasurement.aspx" />
+    <Content Include="deleteMenu.aspx" />
+    <Content Include="deleteMenuIngredients.aspx" />
+    <Content Include="deleteordermenu.aspx" />
+    <Content Include="deletePosition.aspx" />
+    <Content Include="editCategory.aspx" />
+    <Content Include="editcrew.aspx" />
+    <Content Include="editEquipment.aspx" />
+    <Content Include="editExpense1.aspx" />
+    <Content Include="editIngredient.aspx" />
+    <Content Include="editMaintenance.aspx" />
+    <Content Include="editMeasurement.aspx" />
+    <Content Include="editOrder.aspx" />
+    <Content Include="editPosition.aspx" />
+    <Content Include="edituser.aspx" />
+    <Content Include="Equipment.aspx" />
+    <Content Include="EquipmentMaintenance.aspx" />
+    <Content Include="Expense.aspx" />
+    <Content Include="ExpenseDetails.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="images\welcome\App-lists-icon.png" />
+    <Content Include="images\welcome\Developer-icon.png" />
+    <Content Include="images\welcome\Pork-Chop-Set-icon.png" />
+    <Content Include="Ingredient.aspx" />
+    <Content Include="editMenu.aspx" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="images\1-imgbg.jpg" />
+    <Content Include="images\2-logo.png" />
+    <Content Include="IngredientsMenu.aspx" />
+    <Content Include="insertorder.aspx" />
+    <Content Include="Inventory.aspx" />
+    <Content Include="inventorymonitoring.aspx" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\jquery-2.1.3.min.js" />
+    <Content Include="js\npm.js" />
+    <Content Include="js\toastr.js" />
+    <Content Include="js\toastr.min.js" />
+    <Content Include="linechefview.aspx" />
+    <Content Include="listreports.aspx" />
+    <Content Include="logout.aspx" />
+    <Content Include="manageorder.aspx" />
+    <Content Include="measurement.aspx" />
+    <Content Include="menuOrderStat.aspx" />
+    <Content Include="menus.aspx" />
+    <Content Include="order.aspx" />
+    <Content Include="ordetails.aspx" />
+    <Content Include="othersreports.aspx" />
+    <Content Include="Positions.aspx" />
+    <Content Include="printingOr.aspx" />
+    <Content Include="removeMenu.aspx" />
+    <Content Include="reportBestSelling.aspx" />
+    <Content Include="reportDailyExpense.aspx" />
+    <Content Include="reportDailyIncome.aspx" />
+    <Content Include="reportInv.aspx" />
+    <Content Include="reportLeastSelling.aspx" />
+    <Content Include="reportWeeklyMonthlyExpense.aspx" />
+    <Content Include="reportWeeklyMonthlyIncome.aspx" />
+    <Content Include="schedule.aspx" />
+    <Content Include="packages.config" />
+    <Content Include="content\toastr.scss" />
+    <Content Include="content\toastr.less" />
+    <None Include="Scripts\jquery-1.6.4-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.6.4.js" />
+    <Content Include="Scripts\jquery-1.6.4.min.js" />
+    <Content Include="Scripts\toastr.js" />
+    <Content Include="Scripts\toastr.min.js" />
+    <Content Include="userslist.aspx" />
+    <Content Include="verifyorder.aspx" />
+    <Content Include="voidOrder.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Home.aspx">
+      <BrowseToURL>~/Home.aspx</BrowseToURL>
+    </Content>
+    <Content Include="WebForm1.aspx" />
+    <Content Include="welcome.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Code\AudittrailCls.cs" />
+    <Compile Include="App_Code\Billoutcls.cs" />
+    <Compile Include="App_Code\categoriescls.cs" />
+    <Compile Include="App_Code\clsIngredients.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="App_Code\Connection.cs" />
+    <Compile Include="App_Code\crewcls.cs" />
+    <Compile Include="App_Code\EquipmentCls.cs" />
+    <Compile Include="App_Code\ExpenseCls.cs" />
+    <Compile Include="App_Code\ExpenseDetailsCls.cs" />
+    <Compile Include="App_Code\InventoryCls.cs" />
+    <Compile Include="App_Code\LineChefCls.cs" />
+    <Compile Include="App_Code\Loginx.cs" />
+    <Compile Include="App_Code\Maintenance.cs" />
+    <Compile Include="App_Code\measurementcls.cs" />
+    <Compile Include="App_Code\Menus.cs" />
+    <Compile Include="App_Code\messagecls.cs" />
+    <Compile Include="App_Code\Order.cs" />
+    <Compile Include="App_Code\PositionCls.cs" />
+    <Content Include="App_Code\reportsettingscls.cs" />
+    <Compile Include="App_Code\userscls.cs" />
+    <Compile Include="App_Code\verifiyordercls.cs" />
+    <Compile Include="Audittrail.aspx.cs">
+      <DependentUpon>Audittrail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Audittrail.aspx.designer.cs">
+      <DependentUpon>Audittrail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="billout.aspx.cs">
+      <DependentUpon>billout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="billout.aspx.designer.cs">
+      <DependentUpon>billout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="categories.aspx.cs">
+      <DependentUpon>categories.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="categories.aspx.designer.cs">
+      <DependentUpon>categories.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="categoryMenu.aspx.cs">
+      <DependentUpon>categoryMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="categoryMenu.aspx.designer.cs">
+      <DependentUpon>categoryMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChartFoodOrder.aspx.cs">
+      <DependentUpon>ChartFoodOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChartFoodOrder.aspx.designer.cs">
+      <DependentUpon>ChartFoodOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\EquipmentNavigation.ascx.cs">
+      <DependentUpon>EquipmentNavigation.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\EquipmentNavigation.ascx.designer.cs">
+      <DependentUpon>EquipmentNavigation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\Navigation.ascx.cs">
+      <DependentUpon>Navigation.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\Navigation.ascx.designer.cs">
+      <DependentUpon>Navigation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\ordernav.ascx.cs">
+      <DependentUpon>ordernav.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\ordernav.ascx.designer.cs">
+      <DependentUpon>ordernav.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\referenceNav.ascx.cs">
+      <DependentUpon>referenceNav.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\referenceNav.ascx.designer.cs">
+      <DependentUpon>referenceNav.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\referenceNavigation.ascx.cs">
+      <DependentUpon>referenceNavigation.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\referenceNavigation.ascx.designer.cs">
+      <DependentUpon>referenceNavigation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="editInventory.aspx.cs">
+      <DependentUpon>editInventory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="editInventory.aspx.designer.cs">
+      <DependentUpon>editInventory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="crewlist.aspx.cs">
+      <DependentUpon>crewlist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="crewlist.aspx.designer.cs">
+      <DependentUpon>crewlist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="deleteCategory.aspx.cs">
+      <DependentUpon>deleteCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="deleteCategory.aspx.designer.cs">
+      <DependentUpon>deleteCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="deletecrew.aspx.cs">
+      <DependentUpon>deletecrew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="deletecrew.aspx.designer.cs">
+      <DependentUpon>deletecrew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="deleteEquipment.aspx.cs">
+      <DependentUpon>deleteEquipment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="deleteEquipment.aspx.designer.cs">
+      <DependentUpon>deleteEquipment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="deleteExpense.aspx.cs">
+      <DependentUpon>deleteExpense.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="deleteExpense.aspx.designer.cs">
+      <DependentUpon>deleteExpense.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="deleteExpenseDetails.aspx.cs">
+      <DependentUpon>deleteExpenseDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="deleteExpenseDetails.aspx.designer.cs">
+      <DependentUpon>deleteExpenseDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="deleteIngredient.aspx.cs">
+      <DependentUpon>deleteIngredient.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="deleteIngredient.aspx.designer.cs">
+      <DependentUpon>deleteIngredient.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="deleteMaintenance.aspx.cs">
+      <DependentUpon>deleteMaintenance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="deleteMaintenance.aspx.designer.cs">
+      <DependentUpon>deleteMaintenance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="deleteMeasurement.aspx.cs">
+      <DependentUpon>deleteMeasurement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="deleteMeasurement.aspx.designer.cs">
+      <DependentUpon>deleteMeasurement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="deleteMenu.aspx.cs">
+      <DependentUpon>deleteMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="deleteMenu.aspx.designer.cs">
+      <DependentUpon>deleteMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="deleteMenuIngredients.aspx.cs">
+      <DependentUpon>deleteMenuIngredients.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="deleteMenuIngredients.aspx.designer.cs">
+      <DependentUpon>deleteMenuIngredients.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="deleteordermenu.aspx.cs">
+      <DependentUpon>deleteordermenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="deleteordermenu.aspx.designer.cs">
+      <DependentUpon>deleteordermenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="deletePosition.aspx.cs">
+      <DependentUpon>deletePosition.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="deletePosition.aspx.designer.cs">
+      <DependentUpon>deletePosition.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="editCategory.aspx.cs">
+      <DependentUpon>editCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="editCategory.aspx.designer.cs">
+      <DependentUpon>editCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="editcrew.aspx.cs">
+      <DependentUpon>editcrew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="editcrew.aspx.designer.cs">
+      <DependentUpon>editcrew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="editEquipment.aspx.cs">
+      <DependentUpon>editEquipment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="editEquipment.aspx.designer.cs">
+      <DependentUpon>editEquipment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="editExpense1.aspx.cs">
+      <DependentUpon>editExpense1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="editExpense1.aspx.designer.cs">
+      <DependentUpon>editExpense1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="editIngredient.aspx.cs">
+      <DependentUpon>editIngredient.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="editIngredient.aspx.designer.cs">
+      <DependentUpon>editIngredient.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="editMaintenance.aspx.cs">
+      <DependentUpon>editMaintenance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="editMaintenance.aspx.designer.cs">
+      <DependentUpon>editMaintenance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="editMeasurement.aspx.cs">
+      <DependentUpon>editMeasurement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="editMeasurement.aspx.designer.cs">
+      <DependentUpon>editMeasurement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="editOrder.aspx.cs">
+      <DependentUpon>editOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="editOrder.aspx.designer.cs">
+      <DependentUpon>editOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="editPosition.aspx.cs">
+      <DependentUpon>editPosition.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="editPosition.aspx.designer.cs">
+      <DependentUpon>editPosition.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="edituser.aspx.cs">
+      <DependentUpon>edituser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="edituser.aspx.designer.cs">
+      <DependentUpon>edituser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Equipment.aspx.cs">
+      <DependentUpon>Equipment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Equipment.aspx.designer.cs">
+      <DependentUpon>Equipment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EquipmentMaintenance.aspx.cs">
+      <DependentUpon>EquipmentMaintenance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EquipmentMaintenance.aspx.designer.cs">
+      <DependentUpon>EquipmentMaintenance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Expense.aspx.cs">
+      <DependentUpon>Expense.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Expense.aspx.designer.cs">
+      <DependentUpon>Expense.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExpenseDetails.aspx.cs">
+      <DependentUpon>ExpenseDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExpenseDetails.aspx.designer.cs">
+      <DependentUpon>ExpenseDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Ingredient.aspx.cs">
+      <DependentUpon>Ingredient.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ingredient.aspx.designer.cs">
+      <DependentUpon>Ingredient.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="editMenu.aspx.cs">
+      <DependentUpon>editMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="editMenu.aspx.designer.cs">
+      <DependentUpon>editMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IngredientsMenu.aspx.cs">
+      <DependentUpon>IngredientsMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IngredientsMenu.aspx.designer.cs">
+      <DependentUpon>IngredientsMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="insertorder.aspx.cs">
+      <DependentUpon>insertorder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="insertorder.aspx.designer.cs">
+      <DependentUpon>insertorder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory.aspx.cs">
+      <DependentUpon>Inventory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inventory.aspx.designer.cs">
+      <DependentUpon>Inventory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="inventorymonitoring.aspx.cs">
+      <DependentUpon>inventorymonitoring.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="inventorymonitoring.aspx.designer.cs">
+      <DependentUpon>inventorymonitoring.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="linechefview.aspx.cs">
+      <DependentUpon>linechefview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="linechefview.aspx.designer.cs">
+      <DependentUpon>linechefview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="listreports.aspx.cs">
+      <DependentUpon>listreports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="listreports.aspx.designer.cs">
+      <DependentUpon>listreports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manageorder.aspx.cs">
+      <DependentUpon>manageorder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manageorder.aspx.designer.cs">
+      <DependentUpon>manageorder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master_default.Master.cs">
+      <DependentUpon>Master_default.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master_default.Master.designer.cs">
+      <DependentUpon>Master_default.Master</DependentUpon>
+    </Compile>
+    <Compile Include="measurement.aspx.cs">
+      <DependentUpon>measurement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="measurement.aspx.designer.cs">
+      <DependentUpon>measurement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="menuOrderStat.aspx.cs">
+      <DependentUpon>menuOrderStat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="menuOrderStat.aspx.designer.cs">
+      <DependentUpon>menuOrderStat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="menus.aspx.cs">
+      <DependentUpon>menus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="menus.aspx.designer.cs">
+      <DependentUpon>menus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="order.aspx.cs">
+      <DependentUpon>order.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="order.aspx.designer.cs">
+      <DependentUpon>order.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ordetails.aspx.cs">
+      <DependentUpon>ordetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ordetails.aspx.designer.cs">
+      <DependentUpon>ordetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="othersreports.aspx.cs">
+      <DependentUpon>othersreports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="othersreports.aspx.designer.cs">
+      <DependentUpon>othersreports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Positions.aspx.cs">
+      <DependentUpon>Positions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Positions.aspx.designer.cs">
+      <DependentUpon>Positions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="printingOr.aspx.cs">
+      <DependentUpon>printingOr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="printingOr.aspx.designer.cs">
+      <DependentUpon>printingOr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="removeMenu.aspx.cs">
+      <DependentUpon>removeMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="removeMenu.aspx.designer.cs">
+      <DependentUpon>removeMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="reportBestSelling.aspx.cs">
+      <DependentUpon>reportBestSelling.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="reportBestSelling.aspx.designer.cs">
+      <DependentUpon>reportBestSelling.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="reportDailyExpense.aspx.cs">
+      <DependentUpon>reportDailyExpense.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="reportDailyExpense.aspx.designer.cs">
+      <DependentUpon>reportDailyExpense.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="reportDailyIncome.aspx.cs">
+      <DependentUpon>reportDailyIncome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="reportDailyIncome.aspx.designer.cs">
+      <DependentUpon>reportDailyIncome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="reportInv.aspx.cs">
+      <DependentUpon>reportInv.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="reportInv.aspx.designer.cs">
+      <DependentUpon>reportInv.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="reportLeastSelling.aspx.cs">
+      <DependentUpon>reportLeastSelling.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="reportLeastSelling.aspx.designer.cs">
+      <DependentUpon>reportLeastSelling.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\bestseller.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bestseller.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\DailyInventory.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DailyInventory.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptBestSellingDishes.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptBestSellingDishes.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptDailyExpense.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptDailyExpense.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptDailyIncomeStatment.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptDailyIncomeStatment.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptDailyRevenue.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptDailyRevenue.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptIngMostUsed.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptIngMostUsed.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptLeastSellingDishes.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptLeastSellingDishes.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptMaintenance.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptMaintenance.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptMostIngUsed.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptMostIngUsed.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptOrReceipt.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptOrReceipt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptWeeklyMonthlyExpense.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptWeeklyMonthlyExpense.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptWeeklyMonthlyIncome.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptWeeklyMonthlyIncome.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptWeeklyMonthlyRevenue.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptWeeklyMonthlyRevenue.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reportWeeklyMonthlyExpense.aspx.cs">
+      <DependentUpon>reportWeeklyMonthlyExpense.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="reportWeeklyMonthlyExpense.aspx.designer.cs">
+      <DependentUpon>reportWeeklyMonthlyExpense.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="reportWeeklyMonthlyIncome.aspx.cs">
+      <DependentUpon>reportWeeklyMonthlyIncome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="reportWeeklyMonthlyIncome.aspx.designer.cs">
+      <DependentUpon>reportWeeklyMonthlyIncome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="schedule.aspx.cs">
+      <DependentUpon>schedule.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="schedule.aspx.designer.cs">
+      <DependentUpon>schedule.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="userslist.aspx.cs">
+      <DependentUpon>userslist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="userslist.aspx.designer.cs">
+      <DependentUpon>userslist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="verifyorder.aspx.cs">
+      <DependentUpon>verifyorder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="verifyorder.aspx.designer.cs">
+      <DependentUpon>verifyorder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="voidOrder.aspx.cs">
+      <DependentUpon>voidOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="voidOrder.aspx.designer.cs">
+      <DependentUpon>voidOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="welcome.aspx.cs">
+      <DependentUpon>welcome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="welcome.aspx.designer.cs">
+      <DependentUpon>welcome.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\desktop.ini" />
+    <Content Include="fonts\desktop.ini" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="images\desktop.ini" />
+    <Content Include="js\desktop.ini" />
+    <Content Include="Master_default.Master" />
+    <Content Include="css\toastr.css" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Reports\bestseller.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>bestseller.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\DailyInventory.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DailyInventory.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptBestSellingDishes.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptBestSellingDishes.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptDailyExpense.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDailyExpense.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptDailyIncomeStatment.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDailyIncomeStatment.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptDailyRevenue.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDailyRevenue.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptIngMostUsed.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptIngMostUsed.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptLeastSellingDishes.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptLeastSellingDishes.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptMaintenance.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptMaintenance.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptMostIngUsed.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptMostIngUsed.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptOrReceipt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptOrReceipt.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptWeeklyMonthlyExpense.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptWeeklyMonthlyExpense.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptWeeklyMonthlyIncome.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptWeeklyMonthlyIncome.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptWeeklyMonthlyRevenue.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptWeeklyMonthlyRevenue.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2895</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:2387/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
